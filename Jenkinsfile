@@ -1,12 +1,11 @@
 
-pipeline{
-    agent any
-    stages{
-        stage('Maven Build'){
-            steps{
-                sh 'mvn clean package'
+pipeline { 
+    agent any  
+    stages { 
+        stage('Build') { 
+            steps { 
+               echo 'This is a minimal pipeline.' 
             }
         }
-     
-        }
     }
+}
