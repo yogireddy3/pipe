@@ -11,15 +11,7 @@ pipeline{
                 sh 'mvn clean package'
             }
         }
-        stage('Tomcat Deploy'){
-            steps{
-                library 'javahome-libs'
-                tomcatDeploy credId: 'tomcat-dev',
-                             ip: '172.31.40.135',
-                             userName: 'ec2-user',
-                             tomcatHome: '/opt/tomcat8',
-                             warName: 'springmvc'
-            }
+     
         }
     }
 }
